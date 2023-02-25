@@ -66,8 +66,8 @@ Shader "Unlit/SimpleShader" {
                 clipPosition.y /= gamma(transformed[1]);
                 clipPosition.z /= gamma(transformed[2]);
 
-                // Curving (vision delay)
-                float dampFactor = 0.2f;
+                // Vision delay
+                float dampFactor = 0.08f;
                 float distance = length(clipPosition.xyz);
                 float time = (distance / _C);
                 int shift = int((time / _TimeResolution));
@@ -81,6 +81,8 @@ Shader "Unlit/SimpleShader" {
                 clipPosition.x -= (viewPosition.x * dampFactor);
                 clipPosition.y -= (viewPosition.y * dampFactor);
                 clipPosition.z -= (viewPosition.z * dampFactor);
+
+
 
                 // Tiling and Transformation
                 o.clipPosition = mul(UNITY_MATRIX_P, float4(clipPosition, 1.0));
