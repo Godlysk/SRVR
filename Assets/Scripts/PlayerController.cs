@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public Material CubeMaterial;
+    public Material GroundMaterial;
 
     private CharacterController controller;
 
+    private const float C = 6.0f;
+
     private float smoothValue = 0.2f;
-    private float currentVelocity = 5.0f;
+    private float currentVelocity = 4.95f;
     private float xRotation = 0.0f;
     private float yRotation = 0.0f;
 
@@ -23,6 +27,14 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         controller = this.gameObject.GetComponent<CharacterController>();
         instantVelocity = new Vector3(0.0f, 0.0f, 0.0f);
+    }
+
+    void PassSpeed() {
+        // Passes the instantaneous velocity to the materials;
+        float v = instantVelocity.magnitude;
+        float beta = v / C;
+        CubeMaterial.SetFloat("_Beta", beta);
+        GroundMaterial.SetFloat("_Beta", beta);
     }
 
     void Look() {
@@ -57,5 +69,6 @@ public class PlayerController : MonoBehaviour
     {
         Look();
         Move();
+        PassSpeed();
     }
 }

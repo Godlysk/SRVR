@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BlueLT
+  m_Name: GroundMaterial
   m_Shader: {fileID: 4800000, guid: 9aee5a588a2774835b40ca41becf8afa, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -42,6 +42,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 17198718c5735204999fb13dc36e290f, type: 3}
+        m_Scale: {x: 100, y: 100}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex_ST:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

@@ -2,6 +2,7 @@
 Shader "Unlit/SimpleShader" {
     Properties { // all the stuff defined for materials, temporarily ignored
         _MainTex ("Texture", 2D) = "white" {}
+        _Beta ("Beta", Float) = 0.0
     }
     SubShader { // where the shader starts, it contains vertex and fragment shaders
 
@@ -19,7 +20,7 @@ Shader "Unlit/SimpleShader" {
             // includes Unity CG code (C-language include)
             #include "UnityCG.cginc"
 
-            uniform float abs_beta;
+            uniform float _Beta;
 
             // mesh data (vertex position, normal, uv coordinates, vertex colors)
             // uv channels are used to map textures onto geometry
@@ -53,7 +54,7 @@ Shader "Unlit/SimpleShader" {
             VertexOutput vert (VertexInput v) {
                 VertexOutput o; // output struct
                 float3 clipPosition = UnityObjectToViewPos(v.vertex);
-                clipPosition.z /= gamma(0.9);
+                clipPosition.z /= gamma(_Beta);
                 o.clipPosition = mul(UNITY_MATRIX_P, float4(clipPosition, 1.0));
                 float tiling = _MainTex_ST.x;
                 o.uv0 = v.uv0 * tiling;
