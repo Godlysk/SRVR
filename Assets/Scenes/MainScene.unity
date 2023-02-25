@@ -273,7 +273,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 50da7a873971f41c58b981a14fde4aba, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -461,7 +461,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -478,7 +478,7 @@ Camera:
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
-  m_OcclusionCulling: 1
+  m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &963194228
@@ -543,6 +543,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43243e379485a45dfb101341e4a49199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CubeMaterial: {fileID: 2100000, guid: a2397ce05fd13445f885c67450e9fdf6, type: 2}
+  GroundMaterial: {fileID: 2100000, guid: 50da7a873971f41c58b981a14fde4aba, type: 2}
 --- !u!143 &981355345
 CharacterController:
   m_ObjectHideFlags: 0
