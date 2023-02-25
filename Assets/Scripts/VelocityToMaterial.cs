@@ -18,6 +18,8 @@ public class VelocityToMaterial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(isXR());
+        Debug.Log("IsXR");
         lastTrackerPos = InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.Head);
     }
 
@@ -40,5 +42,18 @@ public class VelocityToMaterial : MonoBehaviour
         GroundMaterial.SetFloat("_Beta", beta);
 
         lastTrackerPos = InputTracking.GetLocalPosition(XRNode.Head);
+    }
+
+    private bool isXR() {
+        var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
+        SubsystemManager.GetInstances<XRDisplaySubsystem>(xrDisplaySubsystems);
+        foreach (var xrDisplay in xrDisplaySubsystems)
+        {
+            if (xrDisplay.running)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }

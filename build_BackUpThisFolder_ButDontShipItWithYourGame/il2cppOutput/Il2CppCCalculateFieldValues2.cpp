@@ -736,6 +736,8 @@ struct ValuePathMatcherU5BU5D_tDC6C5FBC8AD9CDC953975B35F515F2F1EC24066E;
 struct Vector2U5BU5D_tFEBBC94BCC6C9C88277BA04047D2B3FDB6ED7FDA;
 // UnityEngine.Vector3[]
 struct Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C;
+// UnityEngine.Vector4[]
+struct Vector4U5BU5D_tC0F3A7115F85007510F6D173968200CD31BCF7AD;
 // Meta.WitAi.Data.Entities.WitDynamicEntitiesData[]
 struct WitDynamicEntitiesDataU5BU5D_t04480B2CB2C361B83EA9E1237F827D9287EBDD36;
 // Meta.WitAi.Data.Info.WitEntityInfo[]
@@ -19067,24 +19069,40 @@ struct PlayerArea_tC80BF9671AA8AD2D0E6C713538D80045DDABA6EE  : public MonoBehavi
 // PlayerController
 struct PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// TMPro.TextMeshPro PlayerController::textMesh
+	TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* ___textMesh_4;
 	// UnityEngine.CharacterController PlayerController::controller
-	CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* ___controller_4;
+	CharacterController_t847C1A2719F60547D7D6077B648D6CE2D1EF3A6A* ___controller_5;
 	// System.Single PlayerController::smoothValue
-	float ___smoothValue_5;
-	// System.Single PlayerController::currentVelocity
-	float ___currentVelocity_6;
+	float ___smoothValue_7;
+	// System.Single PlayerController::peakVelocity
+	float ___peakVelocity_8;
 	// System.Single PlayerController::xRotation
-	float ___xRotation_7;
+	float ___xRotation_9;
 	// System.Single PlayerController::yRotation
-	float ___yRotation_8;
+	float ___yRotation_10;
 	// System.Single PlayerController::maxXRotation
-	float ___maxXRotation_9;
+	float ___maxXRotation_11;
 	// System.Single PlayerController::sensitivity
-	float ___sensitivity_10;
+	float ___sensitivity_12;
+	// System.Int32 PlayerController::bufferSize
+	int32_t ___bufferSize_13;
+	// UnityEngine.Vector4[] PlayerController::positionBuffer
+	Vector4U5BU5D_tC0F3A7115F85007510F6D173968200CD31BCF7AD* ___positionBuffer_14;
+	// System.Int32 PlayerController::bufferHead
+	int32_t ___bufferHead_15;
+	// System.Single PlayerController::timeKeeper
+	float ___timeKeeper_16;
+	// System.Single PlayerController::timeResolution
+	float ___timeResolution_17;
 	// UnityEngine.Vector3 PlayerController::instantVelocity
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___instantVelocity_11;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___instantVelocity_18;
 	// UnityEngine.Vector3 PlayerController::refVelocity
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___refVelocity_12;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___refVelocity_19;
+	// System.Boolean PlayerController::isXR
+	bool ___isXR_20;
+	// UnityEngine.Vector3 PlayerController::lastHeadPos
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___lastHeadPos_21;
 };
 
 // Oculus.Interaction.Samples.PoseUseSample
@@ -30445,9 +30463,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6811[5] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6812[2] = 
 {
 	static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_nameLabel_4)),static_cast<int32_t>(offsetof(UiVectorInspector_t2E23A6C1CB0190012A5F128C671ADA21ABECF913, ___m_valueLabel_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6813[9] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6813[18] = 
 {
-	static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___controller_4)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___smoothValue_5)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___currentVelocity_6)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___xRotation_7)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___yRotation_8)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___maxXRotation_9)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___sensitivity_10)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___instantVelocity_11)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___refVelocity_12)),};
+	static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___textMesh_4)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___controller_5)),0,static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___smoothValue_7)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___peakVelocity_8)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___xRotation_9)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___yRotation_10)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___maxXRotation_11)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___sensitivity_12)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___bufferSize_13)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___positionBuffer_14)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___bufferHead_15)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___timeKeeper_16)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___timeResolution_17)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___instantVelocity_18)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___refVelocity_19)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___isXR_20)),static_cast<int32_t>(offsetof(PlayerController_t7E8D7042FA2D0DFEC54A1FCDF395161D88DAAE95, ___lastHeadPos_21)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6814[5] = 
 {
 	static_cast<int32_t>(offsetof(VelocityToMaterial_t8AE3CEB812ABF98727C4BB9E063CC385122D4179, ___CubeMaterial_4)),static_cast<int32_t>(offsetof(VelocityToMaterial_t8AE3CEB812ABF98727C4BB9E063CC385122D4179, ___GroundMaterial_5)),static_cast<int32_t>(offsetof(VelocityToMaterial_t8AE3CEB812ABF98727C4BB9E063CC385122D4179, ___lastTrackerPos_6)),static_cast<int32_t>(offsetof(VelocityToMaterial_t8AE3CEB812ABF98727C4BB9E063CC385122D4179, ___textMesh_7)),0,};

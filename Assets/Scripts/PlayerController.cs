@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    public TextMeshPro textMesh;
+
     private CharacterController controller;
 
-    private const float C = 6.0f;
+    private const float C = 2.0f;
 
     private float smoothValue = 0.5f;
     private float peakVelocity = 4.0f;
@@ -24,10 +28,15 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 instantVelocity;
     private Vector3 refVelocity = Vector3.zero;
+
+    private bool isXR;
     
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
+        isXR = getIsXR();
+        if (!isXR) {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
         controller = this.gameObject.GetComponent<CharacterController>();
         instantVelocity = new Vector3(0.0f, 0.0f, 0.0f);
         ClearBuffer();
@@ -43,9 +52,17 @@ public class PlayerController : MonoBehaviour
         // Pass all prior positions of player back to array at timeResolution time intervals
         // In shader script, convert original position of player to camera basis 
         // Update positions of mesh vertices accordingly
+        
+        Vector4 newPosition;
+        if (isXR) {
+            Vector3 headPos = InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.Head);
+            newPosition = new Vector4(headPos.x, headPos.y, headPos.z, 1.0f);
+        } else {
+            newPosition = new Vector4(transform.position.x, transform.position.y + 0.5f, transform.position.z, 1.0f);
+        }
         if (timeKeeper >= timeResolution) {
             bufferHead = (bufferHead + 1) % bufferSize;
-            positionBuffer[bufferHead] = new Vector4(transform.position.x, transform.position.y + 0.5f, transform.position.z, 1.0f);
+            positionBuffer[bufferHead] = newPosition;
             timeKeeper -= timeResolution;
         }
         timeKeeper += Time.deltaTime;
@@ -56,6 +73,7 @@ public class PlayerController : MonoBehaviour
         // float v = instantVelocity.magnitude;
         Vector3 beta = instantVelocity / C;
         Vector4 paddedBeta = new Vector4(beta.x, beta.y, beta.z, 0.0f);
+        textMesh.text = paddedBeta.ToString("0.000");
         Shader.SetGlobalFloat("_C", C);
         Shader.SetGlobalVector("_Beta", paddedBeta);
         // Pass the previous positions to shader
@@ -94,11 +112,35 @@ public class PlayerController : MonoBehaviour
         controller.Move(instantVelocity * Time.deltaTime);
     }
     
+    private Vector3 lastHeadPos;
+    void UpdateInstantVelocityXR() {
+        Vector3 headPos = InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.Head);
+        instantVelocity = (headPos - lastHeadPos) / Time.deltaTime;
+        lastHeadPos = headPos;
+    }
+
     void Update()
     {
-        Look();
-        Move();
+        if (isXR) {
+            UpdateInstantVelocityXR();
+        } else {
+            Look();
+            Move();
+        } 
         TrackPosition();
         PassKinematics();
+    }
+
+    private bool getIsXR() {
+        var xrDisplaySubsystems = new List<XRDisplaySubsystem>();
+        SubsystemManager.GetInstances<XRDisplaySubsystem>(xrDisplaySubsystems);
+        foreach (var xrDisplay in xrDisplaySubsystems)
+        {
+            if (xrDisplay.running)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 }
