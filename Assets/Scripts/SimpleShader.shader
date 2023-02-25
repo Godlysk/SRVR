@@ -43,11 +43,25 @@ Shader "Unlit/SimpleShader" {
             // sampler2D _MainTex;
             // float4 _MainTex_ST;
 
+            float gamma_B (float beta_B) {
+                return 1 / (1 - pow(beta_B, 2));
+            }
+
             // vertex shader
             VertexOutput vert (VertexInput v) {
                 VertexOutput o; // output struct
+                float beta_B = 0.7  ; //(_Time[1] * 0.2) % 1;
+			    //v.vertex.x *= multiplyValue * v.normal.x;
+                float3 camera_frame_vertex = float3(
+                    v.vertex.x - _WorldSpaceCameraPos[0]/2,
+                    v.vertex.y - _WorldSpaceCameraPos[1]/2,
+                    v.vertex.z - _WorldSpaceCameraPos[2]/2
+                    );
+			    v.vertex.z = _WorldSpaceCameraPos[2]/2 + (camera_frame_vertex[2] / gamma_B(beta_B));
                 o.clipPosition = UnityObjectToClipPos(v.vertex);
+                
                 o.uv0 = v.uv0;
+                
                 o.normal = v.normal;
                 return o;
             }
