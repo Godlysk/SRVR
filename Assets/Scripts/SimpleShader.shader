@@ -1,7 +1,7 @@
 // name and the path of the shader
 Shader "Unlit/SimpleShader" {
     Properties { // all the stuff defined for materials, temporarily ignored
-        // _MainTex ("Texture", 2D) = "white" {}
+        _MainTex ("Texture", 2D) = "white" {}
     }
     SubShader { // where the shader starts, it contains vertex and fragment shaders
 
@@ -18,6 +18,8 @@ Shader "Unlit/SimpleShader" {
 
             // includes Unity CG code (C-language include)
             #include "UnityCG.cginc"
+
+            uniform float abs_beta;
 
             // mesh data (vertex position, normal, uv coordinates, vertex colors)
             // uv channels are used to map textures onto geometry
@@ -40,46 +42,31 @@ Shader "Unlit/SimpleShader" {
             };
 
             // tied to the properties of the material/texture
-            // sampler2D _MainTex;
-            // float4 _MainTex_ST;
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
 
-            float gamma_B (float beta_B) {
-                return 1 / (1 - pow(beta_B, 2));
+            float gamma(float beta) {
+                return 1 / (1 - pow(beta, 2));
             }
 
             // vertex shader
             VertexOutput vert (VertexInput v) {
                 VertexOutput o; // output struct
-                float beta_B = 0.7; //(_Time[1] * 0.2) % 1;
-			    //v.vertex.x *= multiplyValue * v.normal.x;
-                float3 camera_frame_vertex = float3(
-                    v.vertex.x - _WorldSpaceCameraPos[0]/2,
-                    v.vertex.y - _WorldSpaceCameraPos[1]/2,
-                    v.vertex.z - _WorldSpaceCameraPos[2]/2
-                    );
-			    v.vertex.z = _WorldSpaceCameraPos[2]/2 + (camera_frame_vertex[2] / gamma_B(beta_B));
-                o.clipPosition = UnityObjectToClipPos(v.vertex);
-                
-                o.uv0 = v.uv0;
-                
+                float3 clipPosition = UnityObjectToViewPos(v.vertex);
+                clipPosition.z /= gamma(0.9);
+                o.clipPosition = mul(UNITY_MATRIX_P, float4(clipPosition, 1.0));
+                float tiling = _MainTex_ST.x;
+                o.uv0 = v.uv0 * tiling;
                 o.normal = v.normal;
                 return o;
             }
 
+
             // see fixed, float, half (data types)
             // fragment shader (returns a color)
             fixed4 frag (VertexOutput o) : SV_Target {
-                float2 uv = o.uv0;
-                float lightDirection = normalize( float3 (1, 1, 1) );
-                float3 lightColor = float3(1.0, 1.0, 0.0);
-                // float3 normal = (o.normal * 0.5 + 0.5);
-                // lambert lighting
-                float3 ambientLight = float3(0.1, 0.1, 0.1);
-                float3 lightFalloff = dot(lightDirection, o.normal); 
-                float3 diffuseLight = (lightColor * lightFalloff);
-                float3 lighting = normalize(diffuseLight + ambientLight);
-                
-                return float4(lighting, 0);
+                fixed4 col = tex2D(_MainTex, o.uv0);
+                return col;
             }
 
             ENDCG
