@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector4[] positionBuffer;
     private int bufferHead = 0;
     private float timeKeeper = 0.0f;
-    private float timeResolution = 0.2f;
+    private float timeResolution = 0.05f;
 
     private Vector3 instantVelocity;
     private Vector3 refVelocity = Vector3.zero;
@@ -43,7 +43,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void TrackPosition() {
-        // Pass all prior positions of player back to array at 0.2 time intervals
+        // Pass all prior positions of player back to array at timeResolution time intervals
         // In shader script, convert original position of player to camera basis 
         // Update positions of mesh vertices accordingly
         if (timeKeeper >= timeResolution) {
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
         Shader.SetGlobalFloat("_C", C);
         Shader.SetGlobalVector("_Beta", paddedBeta);
         // Pass the previous positions to shader
-        Debug.Log(positionBuffer[bufferHead] + " " + bufferHead);
+        // Debug.Log(positionBuffer[bufferHead] + " " + bufferHead);
         Shader.SetGlobalFloat("_TimeResolution", timeResolution);
         Shader.SetGlobalInt("_BufferHead", bufferHead);
         Shader.SetGlobalVectorArray("_PositionBuffer", positionBuffer);

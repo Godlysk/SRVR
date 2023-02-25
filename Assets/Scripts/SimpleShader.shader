@@ -18,14 +18,14 @@ Shader "Unlit/SimpleShader" {
             // includes Unity CG code (C-language include)
             #include "UnityCG.cginc"
 
-            int bufferSize = 200;
+            int bufferSize = 100;
 
             // Globally Set Values
             float _C;
             float4 _Beta;
             float _TimeResolution;
             int _BufferHead;
-            float4 _PositionBuffer[200];
+            float4 _PositionBuffer[100];
 
             // mesh data (vertex position, normal, uv coordinates, vertex colors)
             // uv channels are used to map textures onto geometry
@@ -67,15 +67,20 @@ Shader "Unlit/SimpleShader" {
                 clipPosition.z /= gamma(transformed[2]);
 
                 // Curving (vision delay)
+                float dampFactor = 0.2f;
                 float distance = length(clipPosition.xyz);
                 float time = (distance / _C);
-                int shift = 0; // int(time / _TimeResolution); // (possible error)
-                int index = int(fmod((fmod(_BufferHead - shift, bufferSize) + bufferSize), bufferSize)); 
+                int shift = int((time / _TimeResolution));
+                int index = (_BufferHead - shift);
+                if (index < 0)
+                    index = bufferSize + index;
+                if (index < 0)
+                    index = _BufferHead;
                 float4 oldPosition = _PositionBuffer[index];
                 float4 viewPosition = mul(UNITY_MATRIX_V, oldPosition);
-                clipPosition.x += viewPosition.x;
-                clipPosition.y += viewPosition.y;
-                clipPosition.z += viewPosition.z;
+                clipPosition.x -= (viewPosition.x * dampFactor);
+                clipPosition.y -= (viewPosition.y * dampFactor);
+                clipPosition.z -= (viewPosition.z * dampFactor);
 
                 // Tiling and Transformation
                 o.clipPosition = mul(UNITY_MATRIX_P, float4(clipPosition, 1.0));
