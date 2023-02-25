@@ -23,7 +23,7 @@ Shader "Unlit/SimpleShader" {
             // uv channels are used to map textures onto geometry
             struct VertexInput {
                 float4 vertex : POSITION;
-                // float4 color : COLOR;
+                float4 color : COLOR;
                 float3 normal : NORMAL;
                 // float4 tangent : TANGENT;
                 float2 uv0 : TEXCOORD0;
@@ -50,7 +50,7 @@ Shader "Unlit/SimpleShader" {
             // vertex shader
             VertexOutput vert (VertexInput v) {
                 VertexOutput o; // output struct
-                float beta_B = 0.7  ; //(_Time[1] * 0.2) % 1;
+                float beta_B = 0.7; //(_Time[1] * 0.2) % 1;
 			    //v.vertex.x *= multiplyValue * v.normal.x;
                 float3 camera_frame_vertex = float3(
                     v.vertex.x - _WorldSpaceCameraPos[0]/2,

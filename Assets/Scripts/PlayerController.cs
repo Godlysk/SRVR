@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float smoothValue = 0.2f;
-    public float currentVelocity = 2.0f;
+    private float smoothValue = 0.5f;
+    private float currentVelocity = 5.0f;
+    private float rotationStep = 30.0f;
 
     private Vector3 instantVelocity;
     private Vector3 refVelocity = Vector3.zero;
@@ -15,29 +16,40 @@ public class PlayerController : MonoBehaviour
         instantVelocity = new Vector3(0.0f, 0.0f, 0.0f);
         Debug.Log("Entered Player Controller.");
     }
-    
-    void Update()
-    {
 
+    void Look() {
+        // Basic Rotate Camera
+        if (Input.GetKey(KeyCode.LeftArrow))
+            transform.eulerAngles -= new Vector3(0, rotationStep, 0) * Time.deltaTime;
+        if (Input.GetKey(KeyCode.RightArrow))
+            transform.eulerAngles += new Vector3(0, rotationStep, 0) * Time.deltaTime;
+    }
+
+    void Move() {
         Vector3 targetVelocity;
         float xVelocity = 0.0f;
         float zVelocity = 0.0f;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        // Smooth Move Object
+        if (Input.GetKey(KeyCode.W))
             zVelocity = 1.0f;
-        if (Input.GetKey(KeyCode.DownArrow))
-            zVelocity = -1.0f;
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))
             xVelocity = -1.0f;
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.S))
+            zVelocity = -1.0f;
+        if (Input.GetKey(KeyCode.D))
             xVelocity = 1.0f;
 
         targetVelocity = new Vector3(xVelocity, 0.0f, zVelocity);
         targetVelocity.Normalize();
         targetVelocity *= currentVelocity;
         instantVelocity = Vector3.SmoothDamp(instantVelocity, targetVelocity, ref refVelocity, smoothValue);
-
         transform.position += (instantVelocity * Time.deltaTime);
-        
+    }
+    
+    void Update()
+    {
+        Look();
+        Move();
     }
 }
