@@ -148,6 +148,10 @@ Shader "Unlit/SimpleShader" {
                 float3 beta3 = float3(o.transformedVelocity[0], o.transformedVelocity[1], o.transformedVelocity[2]);
                 float betaMagnitude = length(beta3);
                 float gammaFull = gamma(betaMagnitude);
+
+                if (betaMagnitude <= 0.1f) // change to enable/disable
+                    return rgba;
+                
                 float3 directionUnit = normalize(o.worldPosition);
                 float updatedWavelength = wavelength * gammaFull * (1 - dot(beta3, directionUnit));
                 float3 hsvUpdated = lambda2hsv(updatedWavelength, hsv);
@@ -158,7 +162,7 @@ Shader "Unlit/SimpleShader" {
                 float denominator = 0.1f;
                 float hue = 0.0f;
                 float dotProduct = dot(beta3, directionUnit);
-                for (float skyWavelength = 200.0f; skyWavelength < 1200.0f; skyWavelength += 5.0f) {
+                for (float skyWavelength = 200.0f; skyWavelength < 1200.0f; skyWavelength += 10.0f) {
                     float ratio = blackBodyDistribution(skyWavelength);
                     float transformedSkyWavelength = skyWavelength * gammaFull * (1 - dotProduct);
                     if (300.0f <= transformedSkyWavelength && transformedSkyWavelength <= 650.0f) {

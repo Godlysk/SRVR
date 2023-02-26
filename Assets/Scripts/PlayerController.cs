@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public Material CubeMaterial;
     public Material GroundMaterial;
 
+    public TextMeshProUGUI speedDisplay;
+
     private CharacterController controller;
 
-    private const float C = 6.0f;
+    private const float C = 5.0f;
 
     private float smoothValue = 0.5f;
     private float peakVelocity = 4.0f;
@@ -34,6 +37,11 @@ public class PlayerController : MonoBehaviour
         controller = this.gameObject.GetComponent<CharacterController>();
         instantVelocity = new Vector3(0.0f, 0.0f, 0.0f);
         ClearBuffer();
+    }
+
+    void UpdateDisplay() {
+        float beta = (instantVelocity / C).magnitude * 100;
+        speedDisplay.text = beta.ToString("0.00") + "% of light speed";
     }
 
     void ClearBuffer() {
@@ -103,5 +111,6 @@ public class PlayerController : MonoBehaviour
         Move();
         TrackPosition();
         PassKinematics();
+        UpdateDisplay();
     }
 }
