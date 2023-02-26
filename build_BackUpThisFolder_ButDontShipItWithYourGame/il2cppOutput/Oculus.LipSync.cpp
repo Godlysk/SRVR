@@ -3933,7 +3933,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRLipSyncDebugConsole_AddMessage_m3BA3F
 		String_t* L_1 = ___0_message;
 		NullCheck(L_0);
 		int32_t L_2;
-		L_2 = VirtualFuncInvoker1< int32_t, RuntimeObject* >::Invoke(27 /* System.Int32 System.Collections.ArrayList::Add(System.Object) */, L_0, L_1);
+		L_2 = VirtualFuncInvoker1< int32_t, RuntimeObject* >::Invoke(29 /* System.Int32 System.Collections.ArrayList::Add(System.Object) */, L_0, L_1);
 		// if(textMsg != null)
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___textMsg_6;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -3967,7 +3967,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRLipSyncDebugConsole_ClearMessages_m7D
 		// messages.Clear();
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_0 = __this->___messages_4;
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(29 /* System.Void System.Collections.ArrayList::Clear() */, L_0);
+		VirtualActionInvoker0::Invoke(31 /* System.Void System.Collections.ArrayList::Clear() */, L_0);
 		// Display();
 		OVRLipSyncDebugConsole_Display_mDB12A529E56335F593483297CC39A2DDF218E52D(__this, NULL);
 		// }
@@ -3996,7 +3996,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRLipSyncDebugConsole_Prune_m9CC441286C
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_0 = __this->___messages_4;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(21 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(22 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_0);
 		int32_t L_2 = __this->___maxMessages_5;
 		if ((((int32_t)L_1) <= ((int32_t)L_2)))
 		{
@@ -4008,7 +4008,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRLipSyncDebugConsole_Prune_m9CC441286C
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_3 = __this->___messages_4;
 		NullCheck(L_3);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(21 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_3);
+		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(22 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_3);
 		if ((((int32_t)L_4) > ((int32_t)0)))
 		{
 			goto IL_0025;
@@ -4026,7 +4026,7 @@ IL_0025:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_5 = __this->___messages_4;
 		NullCheck(L_5);
 		int32_t L_6;
-		L_6 = VirtualFuncInvoker0< int32_t >::Invoke(21 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_5);
+		L_6 = VirtualFuncInvoker0< int32_t >::Invoke(22 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_5);
 		int32_t L_7 = __this->___maxMessages_5;
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_6, L_7));
 	}
@@ -4037,7 +4037,7 @@ IL_0038:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_8 = __this->___messages_4;
 		int32_t L_9 = V_0;
 		NullCheck(L_8);
-		VirtualActionInvoker2< int32_t, int32_t >::Invoke(41 /* System.Void System.Collections.ArrayList::RemoveRange(System.Int32,System.Int32) */, L_8, 0, L_9);
+		VirtualActionInvoker2< int32_t, int32_t >::Invoke(43 /* System.Void System.Collections.ArrayList::RemoveRange(System.Int32,System.Int32) */, L_8, 0, L_9);
 	}
 
 IL_0045:
@@ -4064,7 +4064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OVRLipSyncDebugConsole_Display_mDB12A529
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_0 = __this->___messages_4;
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(21 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(22 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_0);
 		int32_t L_2 = __this->___maxMessages_5;
 		if ((((int32_t)L_1) <= ((int32_t)L_2)))
 		{
@@ -4110,7 +4110,7 @@ IL_003b:
 		int32_t L_10 = V_0;
 		NullCheck(L_9);
 		RuntimeObject* L_11;
-		L_11 = VirtualFuncInvoker1< RuntimeObject*, int32_t >::Invoke(25 /* System.Object System.Collections.ArrayList::get_Item(System.Int32) */, L_9, L_10);
+		L_11 = VirtualFuncInvoker1< RuntimeObject*, int32_t >::Invoke(27 /* System.Object System.Collections.ArrayList::get_Item(System.Int32) */, L_9, L_10);
 		String_t* L_12;
 		L_12 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_8, ((String_t*)CastclassSealed((RuntimeObject*)L_11, String_t_il2cpp_TypeInfo_var)), NULL);
 		NullCheck(L_7);
@@ -4137,7 +4137,7 @@ IL_0081:
 		ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782FEEF8A* L_19 = __this->___messages_4;
 		NullCheck(L_19);
 		int32_t L_20;
-		L_20 = VirtualFuncInvoker0< int32_t >::Invoke(21 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_19);
+		L_20 = VirtualFuncInvoker0< int32_t >::Invoke(22 /* System.Int32 System.Collections.ArrayList::get_Count() */, L_19);
 		if ((((int32_t)L_18) < ((int32_t)L_20)))
 		{
 			goto IL_003b;

@@ -310,6 +310,8 @@ struct AnyKeyControl_t88E59A594CAF1E3A432C3BEC2634C0CA462D8A14;
 struct ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263;
 // System.ArgumentNullException
 struct ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129;
+// System.AsyncCallback
+struct AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C;
 // System.Attribute
 struct Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA;
 // UnityEngine.InputSystem.Controls.AxisControl
@@ -354,6 +356,8 @@ struct ForDeviceEventObservable_t8A72659C906D6280192E680AF251425A67A7D889;
 struct Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D;
 // UnityEngine.InputSystem.Interactions.HoldInteraction
 struct HoldInteraction_t636DDC457955E74454991E73F9B048F8B5B2BE4E;
+// System.IAsyncResult
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
 // System.Collections.IDictionary
 struct IDictionary_t6D03155AF1FA9083817AA5B6AD7DEEACC26AB220;
 // System.IDisposable
@@ -27247,7 +27251,7 @@ IL_001f:
 		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_6 = V_0;
 		NullCheck(L_5);
 		bool L_7;
-		L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(111 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_5, L_6);
+		L_7 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(112 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_5, L_6);
 		if (L_7)
 		{
 			goto IL_002e;
@@ -30902,7 +30906,7 @@ IL_0139:
 		L_56 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_55, NULL);
 		NullCheck(L_56);
 		Type_t* L_57;
-		L_57 = VirtualFuncInvoker0< Type_t* >::Invoke(113 /* System.Type System.Type::GetEnumUnderlyingType() */, L_56);
+		L_57 = VirtualFuncInvoker0< Type_t* >::Invoke(114 /* System.Type System.Type::GetEnumUnderlyingType() */, L_56);
 		// var underlyingTypeCode = Type.GetTypeCode(underlyingType);
 		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 		int32_t L_58;

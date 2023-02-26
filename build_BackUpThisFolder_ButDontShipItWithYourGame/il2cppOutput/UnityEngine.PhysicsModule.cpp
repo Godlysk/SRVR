@@ -3455,6 +3455,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshCollider_set_sharedMesh_m05F87B9AC04
 	_il2cpp_icall_func = (MeshCollider_set_sharedMesh_m05F87B9AC04139285EBBCC159F77B51C6940E79C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::set_sharedMesh(UnityEngine.Mesh)");
 	_il2cpp_icall_func(__this, ___0_value);
 }
+// System.Void UnityEngine.MeshCollider::set_convex(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MeshCollider_set_convex_m20482D687240D0921BA76B77983403E55A2E3CE1 (MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	typedef void (*MeshCollider_set_convex_m20482D687240D0921BA76B77983403E55A2E3CE1_ftn) (MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455*, bool);
+	static MeshCollider_set_convex_m20482D687240D0921BA76B77983403E55A2E3CE1_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshCollider_set_convex_m20482D687240D0921BA76B77983403E55A2E3CE1_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::set_convex(System.Boolean)");
+	_il2cpp_icall_func(__this, ___0_value);
+}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -416,6 +416,7 @@ IL2CPP_EXTERN_C String_t* _stringLiteral683A95818280F9859694F418A2FD0A817678C9DB
 IL2CPP_EXTERN_C String_t* _stringLiteral685113E80F7727890E98EFD4D624EBB5609E8264;
 IL2CPP_EXTERN_C String_t* _stringLiteral6866AD928BD47DCD6C30739B3569D626588D7C39;
 IL2CPP_EXTERN_C String_t* _stringLiteral6A5993380E485D442DD61D78DF9F107886296357;
+IL2CPP_EXTERN_C String_t* _stringLiteral6CD670400494BC9B6128BDD440B066911E10553D;
 IL2CPP_EXTERN_C String_t* _stringLiteral6CF7BD301C749209B397811794204637EDA8533D;
 IL2CPP_EXTERN_C String_t* _stringLiteral6E940725D3B7C2BC200A9184CC587051911558B4;
 IL2CPP_EXTERN_C String_t* _stringLiteral6FE1ECA79E0057AE38A5966181E17F9BE10AC148;
@@ -540,6 +541,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* RIPEMD160Managed__ctor_m7A61ACB69319E21CDB1
 IL2CPP_EXTERN_C const RuntimeMethod* RSACryptoServiceProvider_Common_mFBF1A75D8845D897D1D7918FEDA9E43ED5C60037_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* RSACryptoServiceProvider_ExportParameters_m8980F0F7F7040DD1AE134A388DCDAD85200C4997_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* RSACryptoServiceProvider_GetHashNameFromOID_m65191D5425D9DFB12648C9B96D29092863E6D5CF_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* RSACryptoServiceProvider_ImportCspBlob_mC558B0030B36D08EE5D57D5D7F6ACC0FC5CB370D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* RSACryptoServiceProvider_OnKeyGenerated_mF4F409622B100A87075A653C416A882CAB51030F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* RSACryptoServiceProvider_VerifyHash_m8638C767565FA34974E2537EA44FBD30AE796ECE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* RSA_EncryptValue_m3FE5D9069FDBF156E443C2045216C1F98B9BCA03_RuntimeMethod_var;
@@ -2382,6 +2384,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsymmetricAlgorithm_Clear_m786C408F7FFE6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyPairPersistence_set_KeyValue_m4FFF2A6100E07BF33C1EB0D4C98E3ECDC536D6EB (KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* __this, String_t* ___0_value, const RuntimeMethod* method) ;
 // System.Void Mono.Security.Cryptography.KeyPairPersistence::Save()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KeyPairPersistence_Save_m19F91B457374C019AB4BDDECA7E02A30DBFBC801 (KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* __this, const RuntimeMethod* method) ;
+// System.Security.Cryptography.RSA Mono.Security.Cryptography.CryptoConvert::FromCapiKeyBlob(System.Byte[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* CryptoConvert_FromCapiKeyBlob_m12FCA133353C7B4096886AEE72F34F0CC6196244 (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_blob, const RuntimeMethod* method) ;
+// System.Boolean System.Security.Cryptography.RSACryptoServiceProvider::get_PublicOnly()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool RSACryptoServiceProvider_get_PublicOnly_mA9FB1ABFDF5D4E7355DC09980EF5C2EEF6236504 (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, const RuntimeMethod* method) ;
 // System.Void System.Security.Cryptography.SHA1CryptoServiceProvider::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SHA1CryptoServiceProvider__ctor_mD863AABD787970AB697A5013890F672428608C0C (SHA1CryptoServiceProvider_tB1E1EB97160D3366AB4FF858F56D2734C2A6675F* __this, const RuntimeMethod* method) ;
 // System.Void System.Security.Cryptography.SHA1::.ctor()
@@ -7070,6 +7076,170 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_OnKeyGenerated_
 
 IL_0041:
 	{
+		return;
+	}
+}
+// System.Void System.Security.Cryptography.RSACryptoServiceProvider::ImportCspBlob(System.Byte[])
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RSACryptoServiceProvider_ImportCspBlob_mC558B0030B36D08EE5D57D5D7F6ACC0FC5CB370D (RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_keyBlob, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* V_0 = NULL;
+	CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* V_1 = NULL;
+	RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF V_3;
+	memset((&V_3), 0, sizeof(V_3));
+	RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF V_4;
+	memset((&V_4), 0, sizeof(V_4));
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* G_B9_0 = NULL;
+	CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* G_B8_0 = NULL;
+	int32_t G_B10_0 = 0;
+	CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* G_B10_1 = NULL;
+	{
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_0 = ___0_keyBlob;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129* L_1 = (ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_t327031E412FAB2351B0022DD5DAD47E67E597129_il2cpp_TypeInfo_var)));
+		NullCheck(L_1);
+		ArgumentNullException__ctor_m444AE141157E333844FC1A9500224C2F9FD24F4B(L_1, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral6CD670400494BC9B6128BDD440B066911E10553D)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_1, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&RSACryptoServiceProvider_ImportCspBlob_mC558B0030B36D08EE5D57D5D7F6ACC0FC5CB370D_RuntimeMethod_var)));
+	}
+
+IL_000e:
+	{
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_2 = ___0_keyBlob;
+		RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* L_3;
+		L_3 = CryptoConvert_FromCapiKeyBlob_m12FCA133353C7B4096886AEE72F34F0CC6196244(L_2, NULL);
+		V_0 = L_3;
+		RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* L_4 = V_0;
+		if (!((RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C*)IsInstSealed((RuntimeObject*)L_4, RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C_il2cpp_TypeInfo_var)))
+		{
+			goto IL_003b;
+		}
+	}
+	{
+		RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* L_5 = V_0;
+		RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* L_6 = V_0;
+		NullCheck(((RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C*)IsInstSealed((RuntimeObject*)L_6, RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C_il2cpp_TypeInfo_var)));
+		bool L_7;
+		L_7 = RSACryptoServiceProvider_get_PublicOnly_mA9FB1ABFDF5D4E7355DC09980EF5C2EEF6236504(((RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C*)IsInstSealed((RuntimeObject*)L_6, RSACryptoServiceProvider_t5B3DF0CAFF65D4103EB90063F3C3B00FE2C6967C_il2cpp_TypeInfo_var)), NULL);
+		NullCheck(L_5);
+		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_8;
+		L_8 = VirtualFuncInvoker1< RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF, bool >::Invoke(11 /* System.Security.Cryptography.RSAParameters System.Security.Cryptography.RSA::ExportParameters(System.Boolean) */, L_5, (bool)((((int32_t)L_7) == ((int32_t)0))? 1 : 0));
+		V_2 = L_8;
+		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_9 = V_2;
+		VirtualActionInvoker1< RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF >::Invoke(12 /* System.Void System.Security.Cryptography.RSA::ImportParameters(System.Security.Cryptography.RSAParameters) */, __this, L_9);
+		goto IL_0061;
+	}
+
+IL_003b:
+	{
+	}
+	try
+	{// begin try (depth: 1)
+		RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* L_10 = V_0;
+		NullCheck(L_10);
+		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_11;
+		L_11 = VirtualFuncInvoker1< RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF, bool >::Invoke(11 /* System.Security.Cryptography.RSAParameters System.Security.Cryptography.RSA::ExportParameters(System.Boolean) */, L_10, (bool)1);
+		V_3 = L_11;
+		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_12 = V_3;
+		VirtualActionInvoker1< RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF >::Invoke(12 /* System.Void System.Security.Cryptography.RSA::ImportParameters(System.Security.Cryptography.RSAParameters) */, __this, L_12);
+		goto IL_0061;
+	}// end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&RuntimeObject_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_004d;
+		}
+		throw e;
+	}
+
+CATCH_004d:
+	{// begin catch(System.Object)
+		RSA_tDDE9BD4C9806074FA9B1C6A5C93523A97116F21A* L_13 = V_0;
+		NullCheck(L_13);
+		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_14;
+		L_14 = VirtualFuncInvoker1< RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF, bool >::Invoke(11 /* System.Security.Cryptography.RSAParameters System.Security.Cryptography.RSA::ExportParameters(System.Boolean) */, L_13, (bool)0);
+		V_4 = L_14;
+		RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF L_15 = V_4;
+		VirtualActionInvoker1< RSAParameters_t14B738B69F9D1EB594D5F391BDF8E42BA16435FF >::Invoke(12 /* System.Void System.Security.Cryptography.RSA::ImportParameters(System.Security.Cryptography.RSAParameters) */, __this, L_15);
+		IL2CPP_POP_ACTIVE_EXCEPTION();
+		goto IL_0061;
+	}// end catch (depth: 1)
+
+IL_0061:
+	{
+		CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* L_16 = (CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3*)il2cpp_codegen_object_new(CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3_il2cpp_TypeInfo_var);
+		NullCheck(L_16);
+		CspParameters__ctor_m13501EC2E6431EAB226063DACD25AB408DD954C8(L_16, 1, NULL);
+		V_1 = L_16;
+		CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* L_17 = V_1;
+		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_18 = ___0_keyBlob;
+		NullCheck(L_18);
+		int32_t L_19 = 5;
+		uint8_t L_20 = (L_18)->GetAt(static_cast<il2cpp_array_size_t>(L_19));
+		G_B8_0 = L_17;
+		if ((((int32_t)L_20) == ((int32_t)((int32_t)36))))
+		{
+			G_B9_0 = L_17;
+			goto IL_0073;
+		}
+	}
+	{
+		G_B10_0 = 1;
+		G_B10_1 = G_B8_0;
+		goto IL_0074;
+	}
+
+IL_0073:
+	{
+		G_B10_0 = 2;
+		G_B10_1 = G_B9_0;
+	}
+
+IL_0074:
+	{
+		NullCheck(G_B10_1);
+		G_B10_1->___KeyNumber_3 = G_B10_0;
+		bool L_21;
+		L_21 = RSACryptoServiceProvider_get_UseMachineKeyStore_m3C3D83294EA42CD6E3EA2C7DFE42E39F29895D04(NULL);
+		if (!L_21)
+		{
+			goto IL_008e;
+		}
+	}
+	{
+		CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* L_22 = V_1;
+		CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* L_23 = L_22;
+		NullCheck(L_23);
+		int32_t L_24;
+		L_24 = CspParameters_get_Flags_m94410636C81B30D1232D916A537A9E52AA04A15F_inline(L_23, NULL);
+		NullCheck(L_23);
+		CspParameters_set_Flags_m9C1F8339A1C321C6EDCB76E6038B7786D9EA7F6A(L_23, ((int32_t)((int32_t)L_24|1)), NULL);
+	}
+
+IL_008e:
+	{
+		CspParameters_t9004F77295A57F5D917C723ACBC835E9C54D18B3* L_25 = V_1;
+		KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6* L_26 = (KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6*)il2cpp_codegen_object_new(KeyPairPersistence_t78D61FCDE172753BFE756B555CBD85127832CDF6_il2cpp_TypeInfo_var);
+		NullCheck(L_26);
+		KeyPairPersistence__ctor_mEDAD0CB8925F5188D527B6FF85B481D94DEDD5DC(L_26, L_25, NULL);
+		__this->___store_3 = L_26;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___store_3), (void*)L_26);
 		return;
 	}
 }

@@ -37785,7 +37785,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool OVRPlugin_RequestSceneCapture_mE8656FE90
 		String_t* L_6 = ___0_requestString;
 		NullCheck(L_5);
 		int32_t L_7;
-		L_7 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(10 /* System.Int32 System.Text.Encoding::GetByteCount(System.String) */, L_5, L_6);
+		L_7 = VirtualFuncInvoker1< int32_t, String_t* >::Invoke(12 /* System.Int32 System.Text.Encoding::GetByteCount(System.String) */, L_5, L_6);
 		G_B4_0 = L_7;
 		G_B4_1 = G_B2_0;
 		goto IL_0030;
@@ -38012,7 +38012,7 @@ IL_0040:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_14 = L_13.___ModelName_0;
 		NullCheck(L_12);
 		String_t* L_15;
-		L_15 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(33 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_12, L_14);
+		L_15 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(36 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_12, L_14);
 		L_11->___ModelName_0 = L_15;
 		Il2CppCodeGenWriteBarrier((void**)(&L_11->___ModelName_0), (void*)L_15);
 		// modelProperties.ModelKey = props.ModelKey;

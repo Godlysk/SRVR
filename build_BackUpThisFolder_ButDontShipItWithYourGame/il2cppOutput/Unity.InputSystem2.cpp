@@ -14389,7 +14389,7 @@ IL_001c_1:
 				InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_4 = V_4;
 				NullCheck(L_3);
 				bool L_5;
-				L_5 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(111 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_3, L_4);
+				L_5 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(112 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_3, L_4);
 				if (!L_5)
 				{
 					goto IL_0046_1;

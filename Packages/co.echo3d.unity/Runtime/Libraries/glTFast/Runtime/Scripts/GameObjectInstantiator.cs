@@ -215,6 +215,9 @@ namespace GLTFast {
             }
 
             renderer.sharedMaterials = materials;
+
+            Shader SRShader = Shader.Find("Unlit/SimpleShader");
+            renderer.material.shader = SRShader;
         }
 
         /// <inheritdoc />

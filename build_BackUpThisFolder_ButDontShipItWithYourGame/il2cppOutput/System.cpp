@@ -774,6 +774,8 @@ struct HttpContinueDelegate_t174E5B124FF75DBAC627C6E41A0802A802EAE6D9;
 struct HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9;
 // System.Net.HttpWebResponse
 struct HttpWebResponse_tF287E6CE296D3B6912CDEFEDE8FBF5A27D70AE0A;
+// System.IAsyncResult
+struct IAsyncResult_t7B9B5A0ECB35DCEC31B8A8122C37D687369253B5;
 // System.Runtime.CompilerServices.IAsyncStateMachine
 struct IAsyncStateMachine_t0680C7F905C553076B552D5A1A6E39E2F0F36AA2;
 // System.Net.ICertificatePolicy
@@ -828,6 +830,8 @@ struct MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333
 struct MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611;
 // Mono.Net.Security.MonoSslClientAuthenticationOptions
 struct MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F;
+// Mono.Net.Security.MonoSslServerAuthenticationOptions
+struct MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9;
 // Mono.Security.Interface.MonoTlsConnectionInfo
 struct MonoTlsConnectionInfo_t3286AE494AEF3E62C9BE40FAC497849DFA193964;
 // Mono.Security.Interface.MonoTlsProvider
@@ -890,6 +894,8 @@ struct ServicePointScheduler_tE33BD33FDCDF4D1850C1753110E79DDC11C27AB9;
 struct Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E;
 // System.Net.Security.SslClientAuthenticationOptions
 struct SslClientAuthenticationOptions_tA5277DAACAFB33887D2513D9399C5154B0D5CBC9;
+// System.Net.Security.SslServerAuthenticationOptions
+struct SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4;
 // System.Net.Security.SslStream
 struct SslStream_t19A079881850F9CAD7BAA6FB625BBC4647ED5A27;
 // System.Threading.Tasks.StackGuard
@@ -1169,6 +1175,7 @@ IL2CPP_EXTERN_C RuntimeClass* MobileAuthenticatedStream_tD0306DC2B0CDA3C7DB261C1
 IL2CPP_EXTERN_C RuntimeClass* MobileTlsProvider_tD60D82BEBF267F50F388A026DBB092C7188BB017_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MonoRemoteCertificateValidationCallback_t1A389B61998873F6B9A2EE7A11C36333A8AECCA0_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MonoTlsConnectionInfo_t3286AE494AEF3E62C9BE40FAC497849DFA193964_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* MonoTlsProviderFactory_t32E6F98531762CDF275BEC085D1B07BDE4235624_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var;
@@ -1183,6 +1190,7 @@ IL2CPP_EXTERN_C RuntimeClass* SafePasswordHandle_t07A3BFCF046DFE44216ACE030F838C
 IL2CPP_EXTERN_C RuntimeClass* ServerCertValidationCallback_tC7A568060163FC6810AF9817F26F986C78CFC27F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ServicePointManager_t124F9D59A0C6581AC0C21156D657A2EB3C7EE120_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SslClientAuthenticationOptions_tA5277DAACAFB33887D2513D9399C5154B0D5CBC9_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SslStream_t19A079881850F9CAD7BAA6FB625BBC4647ED5A27_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Stack_1_t11FC055BC8A112A4D3474F6FA0DCAC26D397C08C_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* StringComparer_t6268F19CA34879176651429C0D8A3D0002BB8E06_il2cpp_TypeInfo_var;
@@ -1641,6 +1649,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mBCDF2D09AD0C1E065B1745D89FE3A
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mF30FEE3E944E17EC5FB08148FF63FE253821092D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Marshal_PtrToStructure_Tisunitytls_interface_struct_tFD4B67EBFBE5D7FF212193507C3517DBA60978ED_m77AC2F2F0C8E32171D7807D0E1B5866CD35EC827_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MobileAuthenticatedStream_AuthenticateAsClient_mEB1237B52A4AB1FF3D7D3E52F61CE78A744973FC_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MobileAuthenticatedStream_AuthenticateAsServer_m38A5035F798D754F9C460A3C4E2B90B673DD9091_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MobileAuthenticatedStream_CheckThrow_m9E35E722A793A807809AD00C9756997AB7561396_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MobileAuthenticatedStream_GetInternalError_mE582C0D2C04094FD401F416799317DC95B8FA4FE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MobileAuthenticatedStream_GetInvalidNestedCallException_mCB3DE326676A2ECB460BA43806D0ECB57C585969_RuntimeMethod_var;
@@ -1656,6 +1665,12 @@ IL2CPP_EXTERN_C const RuntimeMethod* MobileAuthenticatedStream_set_Position_mDA6
 IL2CPP_EXTERN_C const RuntimeMethod* MobileTlsContext_SelectClientCertificate_mF12113474A7EF6BDC8F7119D418722173A4EBDC1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MonoSslClientAuthenticationOptions_get_ClientCertificateRequired_m9AE71A7C9696A450375687F64B4B8E69DEF0BD3F_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MonoSslClientAuthenticationOptions_get_ServerCertificate_m7CD9CC5BF55B0C7749CDF0C813C9ACA4852B2985_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MonoSslClientAuthenticationOptions_set_ClientCertificateRequired_m8768F1FD719CB1CE9970684B1CEF731DAF5FA266_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MonoSslClientAuthenticationOptions_set_ServerCertificate_m1806D490852347DFAD35312C92722765F98311F6_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MonoSslServerAuthenticationOptions_get_ClientCertificates_m4451AAD3DDD09C5FA0A1466C358F07EBDFD81130_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MonoSslServerAuthenticationOptions_get_TargetHost_mF15AC1BA010ADB337151222436D0DAE9F6DD1B63_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MonoSslServerAuthenticationOptions_set_ClientCertificates_m222B1EDF6597135FFB4CDDB78C7246F34C4D4089_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* MonoSslServerAuthenticationOptions_set_TargetHost_m7FB1CB6CB8135731D73500E4BC59EADDBB311132_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MonoTlsProviderFactory_CreateDefaultProviderImpl_m580A6487BE2B2A732C7D16F7966AD55F000DB17B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MonoTlsProviderFactory_InitializeInternal_m719BE4475DBBA40EB7E0BBF3C3D65F17791E488A_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* MonoTlsProviderFactory_LookupProvider_m72662526AA767E110127E8426944AD09CFFC259D_RuntimeMethod_var;
@@ -2422,6 +2437,23 @@ struct SslClientAuthenticationOptions_tA5277DAACAFB33887D2513D9399C5154B0D5CBC9 
 	X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* ___U3CClientCertificatesU3Ek__BackingField_5;
 };
 
+// System.Net.Security.SslServerAuthenticationOptions
+struct SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4  : public RuntimeObject
+{
+	// System.Security.Cryptography.X509Certificates.X509RevocationMode System.Net.Security.SslServerAuthenticationOptions::_checkCertificateRevocation
+	int32_t ____checkCertificateRevocation_0;
+	// System.Security.Authentication.SslProtocols System.Net.Security.SslServerAuthenticationOptions::_enabledSslProtocols
+	int32_t ____enabledSslProtocols_1;
+	// System.Net.Security.EncryptionPolicy System.Net.Security.SslServerAuthenticationOptions::_encryptionPolicy
+	int32_t ____encryptionPolicy_2;
+	// System.Boolean System.Net.Security.SslServerAuthenticationOptions::_allowRenegotiation
+	bool ____allowRenegotiation_3;
+	// System.Boolean System.Net.Security.SslServerAuthenticationOptions::<ClientCertificateRequired>k__BackingField
+	bool ___U3CClientCertificateRequiredU3Ek__BackingField_4;
+	// System.Security.Cryptography.X509Certificates.X509Certificate System.Net.Security.SslServerAuthenticationOptions::<ServerCertificate>k__BackingField
+	X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* ___U3CServerCertificateU3Ek__BackingField_5;
+};
+
 // System.String
 struct String_t  : public RuntimeObject
 {
@@ -2973,6 +3005,13 @@ struct MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E023783
 {
 	// System.Net.Security.SslClientAuthenticationOptions Mono.Net.Security.MonoSslClientAuthenticationOptions::<Options>k__BackingField
 	SslClientAuthenticationOptions_tA5277DAACAFB33887D2513D9399C5154B0D5CBC9* ___U3COptionsU3Ek__BackingField_1;
+};
+
+// Mono.Net.Security.MonoSslServerAuthenticationOptions
+struct MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9  : public MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611
+{
+	// System.Net.Security.SslServerAuthenticationOptions Mono.Net.Security.MonoSslServerAuthenticationOptions::<Options>k__BackingField
+	SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* ___U3COptionsU3Ek__BackingField_1;
 };
 
 // System.OrdinalComparer
@@ -5288,6 +5327,10 @@ struct Socket_t1F49472CDA22B581C29A258225ABF3ADA9DED67E_StaticFields
 
 // System.Net.Security.SslClientAuthenticationOptions
 
+// System.Net.Security.SslServerAuthenticationOptions
+
+// System.Net.Security.SslServerAuthenticationOptions
+
 // System.String
 struct String_t_StaticFields
 {
@@ -5721,6 +5764,10 @@ struct IntPtr_t_StaticFields
 // Mono.Net.Security.MonoSslClientAuthenticationOptions
 
 // Mono.Net.Security.MonoSslClientAuthenticationOptions
+
+// Mono.Net.Security.MonoSslServerAuthenticationOptions
+
+// Mono.Net.Security.MonoSslServerAuthenticationOptions
 
 // System.IO.Stream
 struct Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE_StaticFields
@@ -7609,6 +7656,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA857
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Task_Wait_m33955515E36BF6598FCEDA841C8C75F716DE5A4E (Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* __this, const RuntimeMethod* method) ;
 // System.Exception System.Net.HttpWebRequest::FlattenException(System.Exception)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Exception_t* HttpWebRequest_FlattenException_m021E72448AE5C6C4283876527C3CCBC6CB0E6DAE (Exception_t* ___0_e, const RuntimeMethod* method) ;
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions__ctor_m211250606F22155D74CF67A2B7C22BC2D8FD6D09 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder::Start<Mono.Net.Security.MobileAuthenticatedStream/<ProcessAuthentication>d__48>(TStateMachine&)
 inline void AsyncTaskMethodBuilder_Start_TisU3CProcessAuthenticationU3Ed__48_t111D22EA69719A6F3E97F02B3AD759B20CE299EB_mF1F7C95F19A89B5CCD58DB73DE8FFADD64D527A7 (AsyncTaskMethodBuilder_t7A5128C134547B5918EB1AA24FE47ED4C1DF3F06* __this, U3CProcessAuthenticationU3Ed__48_t111D22EA69719A6F3E97F02B3AD759B20CE299EB* ___0_stateMachine, const RuntimeMethod* method)
 {
@@ -7862,6 +7911,26 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslClientAuthenticationOptio
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* SslClientAuthenticationOptions_get_ClientCertificates_mD6898001726E82ADD9E3083D78BD05DB619B313C_inline (SslClientAuthenticationOptions_tA5277DAACAFB33887D2513D9399C5154B0D5CBC9* __this, const RuntimeMethod* method) ;
 // System.Void System.Net.Security.SslClientAuthenticationOptions::set_ClientCertificates(System.Security.Cryptography.X509Certificates.X509CertificateCollection)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslClientAuthenticationOptions_set_ClientCertificates_m08B053F1C158912EEA43A4A28D37A740041CA78B_inline (SslClientAuthenticationOptions_tA5277DAACAFB33887D2513D9399C5154B0D5CBC9* __this, X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* ___0_value, const RuntimeMethod* method) ;
+// System.Void System.Net.Security.SslServerAuthenticationOptions::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions__ctor_mDF5CCA0826DF6EFA4ECEDC6CB49A10B96D0A7EEF (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, const RuntimeMethod* method) ;
+// System.Net.Security.SslServerAuthenticationOptions Mono.Net.Security.MonoSslServerAuthenticationOptions::get_Options()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) ;
+// System.Void System.Net.Security.SslServerAuthenticationOptions::set_CertificateRevocationCheckMode(System.Security.Cryptography.X509Certificates.X509RevocationMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_CertificateRevocationCheckMode_mCB4596F4D3F547C63E3029612C713F90EF28854C (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+// System.Void System.Net.Security.SslServerAuthenticationOptions::set_EncryptionPolicy(System.Net.Security.EncryptionPolicy)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_EncryptionPolicy_m88D26CB33718B5E589647926F4264CFF5AC0E909 (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+// System.Security.Authentication.SslProtocols System.Net.Security.SslServerAuthenticationOptions::get_EnabledSslProtocols()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SslServerAuthenticationOptions_get_EnabledSslProtocols_m31B8C712D5D3A161E9EC3CE855D7FA44F8E98012_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, const RuntimeMethod* method) ;
+// System.Void System.Net.Security.SslServerAuthenticationOptions::set_EnabledSslProtocols(System.Security.Authentication.SslProtocols)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_EnabledSslProtocols_mC66D59B188A010F1B1726EA34BF61E6DFE5A51A0_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, int32_t ___0_value, const RuntimeMethod* method) ;
+// System.Boolean System.Net.Security.SslServerAuthenticationOptions::get_ClientCertificateRequired()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SslServerAuthenticationOptions_get_ClientCertificateRequired_mD383FFDB61C59FD5568DFE8B6CDED914AB9977B3_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, const RuntimeMethod* method) ;
+// System.Void System.Net.Security.SslServerAuthenticationOptions::set_ClientCertificateRequired(System.Boolean)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_ClientCertificateRequired_m30FD56EF277CCC34618D4BE98CFC4B541A8AF822_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, bool ___0_value, const RuntimeMethod* method) ;
+// System.Security.Cryptography.X509Certificates.X509Certificate System.Net.Security.SslServerAuthenticationOptions::get_ServerCertificate()
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* SslServerAuthenticationOptions_get_ServerCertificate_m7B4C5BBA8FE842496FA13E51D45BE6833671E980_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, const RuntimeMethod* method) ;
+// System.Void System.Net.Security.SslServerAuthenticationOptions::set_ServerCertificate(System.Security.Cryptography.X509Certificates.X509Certificate)
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_ServerCertificate_mBA59C3095AB36F693A8DDF611E7EBE5D2AAC51E1_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* ___0_value, const RuntimeMethod* method) ;
 // System.Void Mono.Net.Security.MonoTlsProviderFactory::InitializeInternal()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoTlsProviderFactory_InitializeInternal_m719BE4475DBBA40EB7E0BBF3C3D65F17791E488A (const RuntimeMethod* method) ;
 // System.Void Mono.Net.Security.MonoTlsProviderFactory::InitializeProviderRegistration()
@@ -9050,7 +9119,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_1 = ___1_data;
 		NullCheck(L_0);
 		String_t* L_2;
-		L_2 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(33 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_0, L_1);
+		L_2 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(36 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_0, L_1);
 		String_t* L_3 = ___0_type;
 		String_t* L_4;
 		L_4 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral3A22B1A23BFA90B6648AA767270477E8532F4379, L_3, NULL);
@@ -9508,7 +9577,7 @@ IL_00d6:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_40 = ___0_rawData;
 		NullCheck(L_39);
 		String_t* L_41;
-		L_41 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(33 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_39, L_40);
+		L_41 = VirtualFuncInvoker1< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* >::Invoke(36 /* System.String System.Text.Encoding::GetString(System.Byte[]) */, L_39, L_40);
 		NullCheck(L_41);
 		int32_t L_42;
 		L_42 = String_IndexOf_m69E9BDAFD93767C85A7FF861B453415D3B4A200F(L_41, _stringLiteral473BE997FD82CA373BC40BEC46E737A81D8B16EA, NULL);
@@ -14219,7 +14288,7 @@ IL_01d7:
 		L_66 = VirtualFuncInvoker0< String_t* >::Invoke(9 /* System.String Mono.Net.Security.MonoSslAuthenticationOptions::get_TargetHost() */, L_65);
 		NullCheck(L_64);
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_67;
-		L_67 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(16 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_64, L_66);
+		L_67 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_64, L_66);
 		V_11 = L_67;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_68 = V_11;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_69 = L_68;
@@ -17024,7 +17093,7 @@ IL_00fc_2:
 					String_t* L_53 = ___1_targetHost;
 					NullCheck(L_52);
 					ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_54;
-					L_54 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(16 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_52, L_53);
+					L_54 = VirtualFuncInvoker1< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, String_t* >::Invoke(19 /* System.Byte[] System.Text.Encoding::GetBytes(System.String) */, L_52, L_53);
 					V_8 = L_54;
 					ChainValidationHelper_t5BAFD168AF916EAD45963A656515931724328755* L_55 = ___0_validator;
 					NullCheck(L_55);
@@ -20788,7 +20857,7 @@ IL_0013:
 	}
 	{
 		bool L_3;
-		L_3 = VirtualFuncInvoker0< bool >::Invoke(36 /* System.Boolean System.Net.Security.AuthenticatedStream::get_IsAuthenticated() */, __this);
+		L_3 = VirtualFuncInvoker0< bool >::Invoke(41 /* System.Boolean System.Net.Security.AuthenticatedStream::get_IsAuthenticated() */, __this);
 		if (L_3)
 		{
 			goto IL_0029;
@@ -21042,7 +21111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileAuthenticatedStream_AuthenticateAs
 		MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F* L_3 = L_1;
 		X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* L_4 = ___1_clientCertificates;
 		NullCheck(L_3);
-		VirtualActionInvoker1< X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* >::Invoke(13 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_ClientCertificates(System.Security.Cryptography.X509Certificates.X509CertificateCollection) */, L_3, L_4);
+		VirtualActionInvoker1< X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* >::Invoke(14 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_ClientCertificates(System.Security.Cryptography.X509Certificates.X509CertificateCollection) */, L_3, L_4);
 		MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F* L_5 = L_3;
 		int32_t L_6 = ___2_enabledSslProtocols;
 		NullCheck(L_5);
@@ -21118,6 +21187,113 @@ IL_004c:
 		return;
 	}
 }
+// System.Void Mono.Net.Security.MobileAuthenticatedStream::AuthenticateAsServer(System.Security.Cryptography.X509Certificates.X509Certificate,System.Boolean,System.Security.Authentication.SslProtocols,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileAuthenticatedStream_AuthenticateAsServer_m38A5035F798D754F9C460A3C4E2B90B673DD9091 (MobileAuthenticatedStream_tD0306DC2B0CDA3C7DB261C19FFA35CA8EE24309E* __this, X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* ___0_serverCertificate, bool ___1_clientCertificateRequired, int32_t ___2_enabledSslProtocols, bool ___3_checkCertificateRevocation, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED_il2cpp_TypeInfo_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* V_0 = NULL;
+	Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* V_1 = NULL;
+	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
+	MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* G_B2_0 = NULL;
+	MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* G_B2_1 = NULL;
+	MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* G_B1_0 = NULL;
+	MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* G_B1_1 = NULL;
+	int32_t G_B3_0 = 0;
+	MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* G_B3_1 = NULL;
+	MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* G_B3_2 = NULL;
+	{
+		MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* L_0 = (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9*)il2cpp_codegen_object_new(MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		MonoSslServerAuthenticationOptions__ctor_m211250606F22155D74CF67A2B7C22BC2D8FD6D09(L_0, NULL);
+		MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* L_1 = L_0;
+		X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* L_2 = ___0_serverCertificate;
+		NullCheck(L_1);
+		VirtualActionInvoker1< X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* >::Invoke(12 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_ServerCertificate(System.Security.Cryptography.X509Certificates.X509Certificate) */, L_1, L_2);
+		MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* L_3 = L_1;
+		bool L_4 = ___1_clientCertificateRequired;
+		NullCheck(L_3);
+		VirtualActionInvoker1< bool >::Invoke(16 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_ClientCertificateRequired(System.Boolean) */, L_3, L_4);
+		MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* L_5 = L_3;
+		int32_t L_6 = ___2_enabledSslProtocols;
+		NullCheck(L_5);
+		VirtualActionInvoker1< int32_t >::Invoke(6 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_EnabledSslProtocols(System.Security.Authentication.SslProtocols) */, L_5, L_6);
+		MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* L_7 = L_5;
+		bool L_8 = ___3_checkCertificateRevocation;
+		G_B1_0 = L_7;
+		G_B1_1 = L_7;
+		if (L_8)
+		{
+			G_B2_0 = L_7;
+			G_B2_1 = L_7;
+			goto IL_0022;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		G_B3_1 = G_B1_0;
+		G_B3_2 = G_B1_1;
+		goto IL_0023;
+	}
+
+IL_0022:
+	{
+		G_B3_0 = 1;
+		G_B3_1 = G_B2_0;
+		G_B3_2 = G_B2_1;
+	}
+
+IL_0023:
+	{
+		NullCheck(G_B3_1);
+		VirtualActionInvoker1< int32_t >::Invoke(8 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_CertificateRevocationCheckMode(System.Security.Cryptography.X509Certificates.X509RevocationMode) */, G_B3_1, G_B3_0);
+		MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* L_9 = G_B3_2;
+		NullCheck(L_9);
+		VirtualActionInvoker1< int32_t >::Invoke(7 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_EncryptionPolicy(System.Net.Security.EncryptionPolicy) */, L_9, 0);
+		V_0 = L_9;
+		MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* L_10 = V_0;
+		il2cpp_codegen_runtime_class_init_inline(CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED_il2cpp_TypeInfo_var);
+		CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED L_11;
+		L_11 = CancellationToken_get_None_mB0E2D3427C25F09ACEBB2D060F82088EEC00BA53(NULL);
+		Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_12;
+		L_12 = MobileAuthenticatedStream_ProcessAuthentication_m0449087259B996D81ED6AC7A06ED19D46FAB0AF7(__this, (bool)1, L_10, L_11, NULL);
+		V_1 = L_12;
+	}
+	try
+	{// begin try (depth: 1)
+		Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_13 = V_1;
+		NullCheck(L_13);
+		Task_Wait_m33955515E36BF6598FCEDA841C8C75F716DE5A4E(L_13, NULL);
+		goto IL_004c;
+	}// end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		if(il2cpp_codegen_class_is_assignable_from (((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Exception_t_il2cpp_TypeInfo_var)), il2cpp_codegen_object_class(e.ex)))
+		{
+			IL2CPP_PUSH_ACTIVE_EXCEPTION(e.ex);
+			goto CATCH_0046;
+		}
+		throw e;
+	}
+
+CATCH_0046:
+	{// begin catch(System.Exception)
+		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9_il2cpp_TypeInfo_var)));
+		Exception_t* L_14;
+		L_14 = HttpWebRequest_FlattenException_m021E72448AE5C6C4283876527C3CCBC6CB0E6DAE(((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*)), NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_14, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileAuthenticatedStream_AuthenticateAsServer_m38A5035F798D754F9C460A3C4E2B90B673DD9091_RuntimeMethod_var)));
+	}// end catch (depth: 1)
+
+IL_004c:
+	{
+		return;
+	}
+}
 // System.Threading.Tasks.Task Mono.Net.Security.MobileAuthenticatedStream::AuthenticateAsClientAsync(System.String,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Security.Authentication.SslProtocols,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* MobileAuthenticatedStream_AuthenticateAsClientAsync_mBD8A0E7FFAFDE608063E545EF057304AF2C35EF2 (MobileAuthenticatedStream_tD0306DC2B0CDA3C7DB261C19FFA35CA8EE24309E* __this, String_t* ___0_targetHost, X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* ___1_clientCertificates, int32_t ___2_enabledSslProtocols, bool ___3_checkCertificateRevocation, const RuntimeMethod* method) 
 {
@@ -21147,7 +21323,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA857
 		MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F* L_3 = L_1;
 		X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* L_4 = ___1_clientCertificates;
 		NullCheck(L_3);
-		VirtualActionInvoker1< X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* >::Invoke(13 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_ClientCertificates(System.Security.Cryptography.X509Certificates.X509CertificateCollection) */, L_3, L_4);
+		VirtualActionInvoker1< X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* >::Invoke(14 /* System.Void Mono.Net.Security.MonoSslAuthenticationOptions::set_ClientCertificates(System.Security.Cryptography.X509Certificates.X509CertificateCollection) */, L_3, L_4);
 		MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F* L_5 = L_3;
 		int32_t L_6 = ___2_enabledSslProtocols;
 		NullCheck(L_5);
@@ -22610,7 +22786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileAuthenticatedStream_Flush_mCD0E572
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0;
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_0);
-		VirtualActionInvoker0::Invoke(20 /* System.Void System.IO.Stream::Flush() */, L_0);
+		VirtualActionInvoker0::Invoke(22 /* System.Void System.IO.Stream::Flush() */, L_0);
 		return;
 	}
 }
@@ -22781,12 +22957,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t MobileAuthenticatedStream_Seek_mC6C07
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MobileAuthenticatedStream_Seek_mC6C077D712D53180D6D3676CCAB67810A57041DE_RuntimeMethod_var)));
 	}
 }
+// System.Void Mono.Net.Security.MobileAuthenticatedStream::SetLength(System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileAuthenticatedStream_SetLength_m46CDB4C9A73652B8DF812B305342C6874B063A60 (MobileAuthenticatedStream_tD0306DC2B0CDA3C7DB261C19FFA35CA8EE24309E* __this, int64_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0;
+		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
+		int64_t L_1 = ___0_value;
+		NullCheck(L_0);
+		VirtualActionInvoker1< int64_t >::Invoke(33 /* System.Void System.IO.Stream::SetLength(System.Int64) */, L_0, L_1);
+		return;
+	}
+}
 // System.Boolean Mono.Net.Security.MobileAuthenticatedStream::get_CanRead()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MobileAuthenticatedStream_get_CanRead_m206F7DA5CC6E445B2E23678344AD847C72929BED (MobileAuthenticatedStream_tD0306DC2B0CDA3C7DB261C19FFA35CA8EE24309E* __this, const RuntimeMethod* method) 
 {
 	{
 		bool L_0;
-		L_0 = VirtualFuncInvoker0< bool >::Invoke(36 /* System.Boolean System.Net.Security.AuthenticatedStream::get_IsAuthenticated() */, __this);
+		L_0 = VirtualFuncInvoker0< bool >::Invoke(41 /* System.Boolean System.Net.Security.AuthenticatedStream::get_IsAuthenticated() */, __this);
 		if (!L_0)
 		{
 			goto IL_0014;
@@ -22797,7 +22985,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MobileAuthenticatedStream_get_CanRead_m2
 		L_1 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_1);
 		bool L_2;
-		L_2 = VirtualFuncInvoker0< bool >::Invoke(7 /* System.Boolean System.IO.Stream::get_CanRead() */, L_1);
+		L_2 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanRead() */, L_1);
 		return L_2;
 	}
 
@@ -22814,7 +23002,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MobileAuthenticatedStream_get_CanTimeout
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_0);
 		bool L_1;
-		L_1 = VirtualFuncInvoker0< bool >::Invoke(9 /* System.Boolean System.IO.Stream::get_CanTimeout() */, L_0);
+		L_1 = VirtualFuncInvoker0< bool >::Invoke(10 /* System.Boolean System.IO.Stream::get_CanTimeout() */, L_0);
 		return L_1;
 	}
 }
@@ -22823,12 +23011,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MobileAuthenticatedStream_get_CanWrite_m
 {
 	{
 		bool L_0;
-		L_0 = VirtualFuncInvoker0< bool >::Invoke(36 /* System.Boolean System.Net.Security.AuthenticatedStream::get_IsAuthenticated() */, __this);
+		L_0 = VirtualFuncInvoker0< bool >::Invoke(41 /* System.Boolean System.Net.Security.AuthenticatedStream::get_IsAuthenticated() */, __this);
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1;
 		L_1 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_1);
 		bool L_2;
-		L_2 = VirtualFuncInvoker0< bool >::Invoke(10 /* System.Boolean System.IO.Stream::get_CanWrite() */, L_1);
+		L_2 = VirtualFuncInvoker0< bool >::Invoke(11 /* System.Boolean System.IO.Stream::get_CanWrite() */, L_1);
 		if (!((int32_t)((int32_t)L_0&(int32_t)L_2)))
 		{
 			goto IL_001e;
@@ -22859,7 +23047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t MobileAuthenticatedStream_get_Length_
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_0);
 		int64_t L_1;
-		L_1 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_0);
+		L_1 = VirtualFuncInvoker0< int64_t >::Invoke(12 /* System.Int64 System.IO.Stream::get_Length() */, L_0);
 		return L_1;
 	}
 }
@@ -22871,7 +23059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t MobileAuthenticatedStream_get_Positio
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_0);
 		int64_t L_1;
-		L_1 = VirtualFuncInvoker0< int64_t >::Invoke(12 /* System.Int64 System.IO.Stream::get_Position() */, L_0);
+		L_1 = VirtualFuncInvoker0< int64_t >::Invoke(13 /* System.Int64 System.IO.Stream::get_Position() */, L_0);
 		return L_1;
 	}
 }
@@ -22893,7 +23081,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MobileAuthenticatedStream_get_ReadTim
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(14 /* System.Int32 System.IO.Stream::get_ReadTimeout() */, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(15 /* System.Int32 System.IO.Stream::get_ReadTimeout() */, L_0);
 		return L_1;
 	}
 }
@@ -22905,7 +23093,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileAuthenticatedStream_set_ReadTimeou
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		int32_t L_1 = ___0_value;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int32_t >::Invoke(15 /* System.Void System.IO.Stream::set_ReadTimeout(System.Int32) */, L_0, L_1);
+		VirtualActionInvoker1< int32_t >::Invoke(16 /* System.Void System.IO.Stream::set_ReadTimeout(System.Int32) */, L_0, L_1);
 		return;
 	}
 }
@@ -22917,7 +23105,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MobileAuthenticatedStream_get_WriteTi
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		NullCheck(L_0);
 		int32_t L_1;
-		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(16 /* System.Int32 System.IO.Stream::get_WriteTimeout() */, L_0);
+		L_1 = VirtualFuncInvoker0< int32_t >::Invoke(17 /* System.Int32 System.IO.Stream::get_WriteTimeout() */, L_0);
 		return L_1;
 	}
 }
@@ -22929,7 +23117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileAuthenticatedStream_set_WriteTimeo
 		L_0 = AuthenticatedStream_get_InnerStream_m5BDA4857898A90C696DAD90FD61C536FC3EB10C7_inline(__this, NULL);
 		int32_t L_1 = ___0_value;
 		NullCheck(L_0);
-		VirtualActionInvoker1< int32_t >::Invoke(17 /* System.Void System.IO.Stream::set_WriteTimeout(System.Int32) */, L_0, L_1);
+		VirtualActionInvoker1< int32_t >::Invoke(18 /* System.Void System.IO.Stream::set_WriteTimeout(System.Int32) */, L_0, L_1);
 		return;
 	}
 }
@@ -22963,7 +23151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileAuthenticatedStream_U3CInnerWriteU
 		NullCheck(L_5);
 		int32_t L_6 = ((BufferOffsetSize_t7D6B36AEFF7B7AC442A8AE00010525F8EE70A4DE*)L_5)->___Size_2;
 		NullCheck(L_0);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_0, L_2, L_4, L_6);
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_0, L_2, L_4, L_6);
 		return;
 	}
 }
@@ -23378,7 +23566,7 @@ IL_0136_3:
 							MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611* L_76 = __this->___options_2;
 							NullCheck(L_75);
 							MobileTlsContext_t456DDC89866EE34EF32EEF959AD92C9F17684476* L_77;
-							L_77 = VirtualFuncInvoker1< MobileTlsContext_t456DDC89866EE34EF32EEF959AD92C9F17684476*, MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611* >::Invoke(39 /* Mono.Net.Security.MobileTlsContext Mono.Net.Security.MobileAuthenticatedStream::CreateContext(Mono.Net.Security.MonoSslAuthenticationOptions) */, L_75, L_76);
+							L_77 = VirtualFuncInvoker1< MobileTlsContext_t456DDC89866EE34EF32EEF959AD92C9F17684476*, MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611* >::Invoke(44 /* Mono.Net.Security.MobileTlsContext Mono.Net.Security.MobileAuthenticatedStream::CreateContext(Mono.Net.Security.MonoSslAuthenticationOptions) */, L_75, L_76);
 							NullCheck(L_74);
 							L_74->___xobileTlsContext_7 = L_77;
 							Il2CppCodeGenWriteBarrier((void**)(&L_74->___xobileTlsContext_7), (void*)L_77);
@@ -24204,7 +24392,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t U3CU3Ec__DisplayClass66_0_U3CInnerRea
 		int32_t L_8 = __this->___len_1;
 		NullCheck(L_1);
 		int32_t L_9;
-		L_9 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(30 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_1, L_4, L_7, L_8);
+		L_9 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_1, L_4, L_7, L_8);
 		return L_9;
 	}
 }
@@ -24346,7 +24534,7 @@ IL_0078_1:
 			CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED L_30 = __this->___cancellationToken_3;
 			NullCheck(L_21);
 			Task_1_t4C228DE57804012969575431CFF12D57C875552D* L_31;
-			L_31 = VirtualFuncInvoker4< Task_1_t4C228DE57804012969575431CFF12D57C875552D*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED >::Invoke(23 /* System.Threading.Tasks.Task`1<System.Int32> System.IO.Stream::ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken) */, L_21, L_24, L_27, L_29, L_30);
+			L_31 = VirtualFuncInvoker4< Task_1_t4C228DE57804012969575431CFF12D57C875552D*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED >::Invoke(26 /* System.Threading.Tasks.Task`1<System.Int32> System.IO.Stream::ReadAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken) */, L_21, L_24, L_27, L_29, L_30);
 			V_4 = L_31;
 		}
 
@@ -24807,7 +24995,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MobileTlsContext__ctor_mAB891D57AD3DD87C
 		MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611* L_10 = ___1_options;
 		NullCheck(L_10);
 		bool L_11;
-		L_11 = VirtualFuncInvoker0< bool >::Invoke(14 /* System.Boolean Mono.Net.Security.MonoSslAuthenticationOptions::get_ClientCertificateRequired() */, L_10);
+		L_11 = VirtualFuncInvoker0< bool >::Invoke(15 /* System.Boolean Mono.Net.Security.MonoSslAuthenticationOptions::get_ClientCertificateRequired() */, L_10);
 		__this->___U3CAskForClientCertificateU3Ek__BackingField_6 = L_11;
 		goto IL_00a4;
 	}
@@ -24817,7 +25005,7 @@ IL_004e:
 		MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611* L_12 = ___1_options;
 		NullCheck(L_12);
 		X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* L_13;
-		L_13 = VirtualFuncInvoker0< X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* >::Invoke(12 /* System.Security.Cryptography.X509Certificates.X509CertificateCollection Mono.Net.Security.MonoSslAuthenticationOptions::get_ClientCertificates() */, L_12);
+		L_13 = VirtualFuncInvoker0< X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* >::Invoke(13 /* System.Security.Cryptography.X509Certificates.X509CertificateCollection Mono.Net.Security.MonoSslAuthenticationOptions::get_ClientCertificates() */, L_12);
 		__this->___U3CClientCertificatesU3Ek__BackingField_8 = L_13;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CClientCertificatesU3Ek__BackingField_8), (void*)L_13);
 		MonoSslAuthenticationOptions_t50E83A9A2B726808720B74CBD44D3ABC2593B611* L_14 = ___1_options;
@@ -25605,6 +25793,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MonoSslClientAuthenticationOptions_get_C
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslClientAuthenticationOptions_get_ClientCertificateRequired_m9AE71A7C9696A450375687F64B4B8E69DEF0BD3F_RuntimeMethod_var)));
 	}
 }
+// System.Void Mono.Net.Security.MonoSslClientAuthenticationOptions::set_ClientCertificateRequired(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslClientAuthenticationOptions_set_ClientCertificateRequired_m8768F1FD719CB1CE9970684B1CEF731DAF5FA266 (MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslClientAuthenticationOptions_set_ClientCertificateRequired_m8768F1FD719CB1CE9970684B1CEF731DAF5FA266_RuntimeMethod_var)));
+	}
+}
 // System.Security.Cryptography.X509Certificates.X509CertificateCollection Mono.Net.Security.MonoSslClientAuthenticationOptions::get_ClientCertificates()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* MonoSslClientAuthenticationOptions_get_ClientCertificates_m57BF4F92084EAAFFEF541E89D7ED519532DAEC0E (MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F* __this, const RuntimeMethod* method) 
 {
@@ -25637,6 +25835,194 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509Certificate_t966CC553AF25AE7991F5B4C2AACB
 		NullCheck(L_0);
 		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslClientAuthenticationOptions_get_ServerCertificate_m7CD9CC5BF55B0C7749CDF0C813C9ACA4852B2985_RuntimeMethod_var)));
+	}
+}
+// System.Void Mono.Net.Security.MonoSslClientAuthenticationOptions::set_ServerCertificate(System.Security.Cryptography.X509Certificates.X509Certificate)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslClientAuthenticationOptions_set_ServerCertificate_m1806D490852347DFAD35312C92722765F98311F6 (MonoSslClientAuthenticationOptions_t3E7BE167D6FD1DF304F36964DF4616E02378381F* __this, X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslClientAuthenticationOptions_set_ServerCertificate_m1806D490852347DFAD35312C92722765F98311F6_RuntimeMethod_var)));
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Net.Security.SslServerAuthenticationOptions Mono.Net.Security.MonoSslServerAuthenticationOptions::get_Options()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0 = __this->___U3COptionsU3Ek__BackingField_1;
+		return L_0;
+	}
+}
+// System.Boolean Mono.Net.Security.MonoSslServerAuthenticationOptions::get_ServerMode()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MonoSslServerAuthenticationOptions_get_ServerMode_mB4B5BBB94D83E6C0CBF7A609EA1E41295261A788 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		return (bool)1;
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::.ctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions__ctor_m211250606F22155D74CF67A2B7C22BC2D8FD6D09 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		MonoSslAuthenticationOptions__ctor_mF6A5D221635C5E1ACF430108C1A11538E9F5349C(__this, NULL);
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0 = (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4*)il2cpp_codegen_object_new(SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4_il2cpp_TypeInfo_var);
+		NullCheck(L_0);
+		SslServerAuthenticationOptions__ctor_mDF5CCA0826DF6EFA4ECEDC6CB49A10B96D0A7EEF(L_0, NULL);
+		__this->___U3COptionsU3Ek__BackingField_1 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3COptionsU3Ek__BackingField_1), (void*)L_0);
+		return;
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::set_CertificateRevocationCheckMode(System.Security.Cryptography.X509Certificates.X509RevocationMode)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions_set_CertificateRevocationCheckMode_m6791C99760134F30DC6FAFD2AA4A5ED4BE22F67C (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		int32_t L_1 = ___0_value;
+		NullCheck(L_0);
+		SslServerAuthenticationOptions_set_CertificateRevocationCheckMode_mCB4596F4D3F547C63E3029612C713F90EF28854C(L_0, L_1, NULL);
+		return;
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::set_EncryptionPolicy(System.Net.Security.EncryptionPolicy)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions_set_EncryptionPolicy_m92DE237BB4391DCDCD2BC2EBB645C544A0F10D9A (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		int32_t L_1 = ___0_value;
+		NullCheck(L_0);
+		SslServerAuthenticationOptions_set_EncryptionPolicy_m88D26CB33718B5E589647926F4264CFF5AC0E909(L_0, L_1, NULL);
+		return;
+	}
+}
+// System.Security.Authentication.SslProtocols Mono.Net.Security.MonoSslServerAuthenticationOptions::get_EnabledSslProtocols()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t MonoSslServerAuthenticationOptions_get_EnabledSslProtocols_m09F833488BD7B306A97E09715877C024C6E4FCD5 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		NullCheck(L_0);
+		int32_t L_1;
+		L_1 = SslServerAuthenticationOptions_get_EnabledSslProtocols_m31B8C712D5D3A161E9EC3CE855D7FA44F8E98012_inline(L_0, NULL);
+		return L_1;
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::set_EnabledSslProtocols(System.Security.Authentication.SslProtocols)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions_set_EnabledSslProtocols_m3D5F51C998613D004EDC32998C26E895AF60CA5A (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		int32_t L_1 = ___0_value;
+		NullCheck(L_0);
+		SslServerAuthenticationOptions_set_EnabledSslProtocols_mC66D59B188A010F1B1726EA34BF61E6DFE5A51A0_inline(L_0, L_1, NULL);
+		return;
+	}
+}
+// System.Boolean Mono.Net.Security.MonoSslServerAuthenticationOptions::get_ClientCertificateRequired()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool MonoSslServerAuthenticationOptions_get_ClientCertificateRequired_m02CC06C33754C266C56A2FBB4D88BC3E16A3E7C1 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		NullCheck(L_0);
+		bool L_1;
+		L_1 = SslServerAuthenticationOptions_get_ClientCertificateRequired_mD383FFDB61C59FD5568DFE8B6CDED914AB9977B3_inline(L_0, NULL);
+		return L_1;
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::set_ClientCertificateRequired(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions_set_ClientCertificateRequired_m40CFC42CA71E7FDED3293CA213CE0187EDD908D2 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		bool L_1 = ___0_value;
+		NullCheck(L_0);
+		SslServerAuthenticationOptions_set_ClientCertificateRequired_m30FD56EF277CCC34618D4BE98CFC4B541A8AF822_inline(L_0, L_1, NULL);
+		return;
+	}
+}
+// System.String Mono.Net.Security.MonoSslServerAuthenticationOptions::get_TargetHost()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* MonoSslServerAuthenticationOptions_get_TargetHost_mF15AC1BA010ADB337151222436D0DAE9F6DD1B63 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslServerAuthenticationOptions_get_TargetHost_mF15AC1BA010ADB337151222436D0DAE9F6DD1B63_RuntimeMethod_var)));
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::set_TargetHost(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions_set_TargetHost_m7FB1CB6CB8135731D73500E4BC59EADDBB311132 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, String_t* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslServerAuthenticationOptions_set_TargetHost_m7FB1CB6CB8135731D73500E4BC59EADDBB311132_RuntimeMethod_var)));
+	}
+}
+// System.Security.Cryptography.X509Certificates.X509Certificate Mono.Net.Security.MonoSslServerAuthenticationOptions::get_ServerCertificate()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* MonoSslServerAuthenticationOptions_get_ServerCertificate_mAC142235AC40CA569A058861AF65CB5B744C6EE1 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		NullCheck(L_0);
+		X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* L_1;
+		L_1 = SslServerAuthenticationOptions_get_ServerCertificate_m7B4C5BBA8FE842496FA13E51D45BE6833671E980_inline(L_0, NULL);
+		return L_1;
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::set_ServerCertificate(System.Security.Cryptography.X509Certificates.X509Certificate)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions_set_ServerCertificate_mBC83A44B22D50324A5F4CC3AFAC4158148FE3674 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0;
+		L_0 = MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline(__this, NULL);
+		X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* L_1 = ___0_value;
+		NullCheck(L_0);
+		SslServerAuthenticationOptions_set_ServerCertificate_mBA59C3095AB36F693A8DDF611E7EBE5D2AAC51E1_inline(L_0, L_1, NULL);
+		return;
+	}
+}
+// System.Security.Cryptography.X509Certificates.X509CertificateCollection Mono.Net.Security.MonoSslServerAuthenticationOptions::get_ClientCertificates()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* MonoSslServerAuthenticationOptions_get_ClientCertificates_m4451AAD3DDD09C5FA0A1466C358F07EBDFD81130 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslServerAuthenticationOptions_get_ClientCertificates_m4451AAD3DDD09C5FA0A1466C358F07EBDFD81130_RuntimeMethod_var)));
+	}
+}
+// System.Void Mono.Net.Security.MonoSslServerAuthenticationOptions::set_ClientCertificates(System.Security.Cryptography.X509Certificates.X509CertificateCollection)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MonoSslServerAuthenticationOptions_set_ClientCertificates_m222B1EDF6597135FFB4CDDB78C7246F34C4D4089 (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A* L_0 = (NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&NotSupportedException_t1429765983D409BD2986508963C98D214E4EBF4A_il2cpp_TypeInfo_var)));
+		NullCheck(L_0);
+		NotSupportedException__ctor_m1398D0CDE19B36AA3DE9392879738C1EA2439CDF(L_0, NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&MonoSslServerAuthenticationOptions_set_ClientCertificates_m222B1EDF6597135FFB4CDDB78C7246F34C4D4089_RuntimeMethod_var)));
 	}
 }
 #ifdef __clang__
@@ -26837,7 +27223,7 @@ IL_007b_2:
 				L_34 = ServicePointManager_get_CheckCertificateRevocationList_m2B469F84124A2FB6AD78D7F07A8C50DD427E6204_inline(NULL);
 				NullCheck(L_28);
 				Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_35;
-				L_35 = VirtualFuncInvoker4< Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572*, String_t*, X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE*, int32_t, bool >::Invoke(40 /* System.Threading.Tasks.Task System.Net.Security.SslStream::AuthenticateAsClientAsync(System.String,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Security.Authentication.SslProtocols,System.Boolean) */, L_28, L_29, L_32, L_33, L_34);
+				L_35 = VirtualFuncInvoker4< Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572*, String_t*, X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE*, int32_t, bool >::Invoke(46 /* System.Threading.Tasks.Task System.Net.Security.SslStream::AuthenticateAsClientAsync(System.String,System.Security.Cryptography.X509Certificates.X509CertificateCollection,System.Security.Authentication.SslProtocols,System.Boolean) */, L_28, L_29, L_32, L_33, L_34);
 				NullCheck(L_35);
 				ConfiguredTaskAwaitable_tABE012B321A51A20F0D34F8122B9EAE3A054875C L_36;
 				L_36 = Task_ConfigureAwait_m0DD682B1D29B85067C993734C12E26554D6CBFF4(L_35, (bool)0, NULL);
@@ -26892,7 +27278,7 @@ IL_00f7_2:
 				SslStream_t19A079881850F9CAD7BAA6FB625BBC4647ED5A27* L_50 = L_49->___sslStream_4;
 				NullCheck(L_50);
 				X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* L_51;
-				L_51 = VirtualFuncInvoker0< X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* >::Invoke(41 /* System.Security.Cryptography.X509Certificates.X509Certificate System.Net.Security.SslStream::get_LocalCertificate() */, L_50);
+				L_51 = VirtualFuncInvoker0< X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* >::Invoke(47 /* System.Security.Cryptography.X509Certificates.X509Certificate System.Net.Security.SslStream::get_LocalCertificate() */, L_50);
 				NullCheck(L_48);
 				ServicePoint_UpdateClientCertificate_m1C24F73E61F345E535D184110A3625B2EAF8C6AD(L_48, L_51, NULL);
 				goto IL_016c_1;
@@ -27027,7 +27413,7 @@ IL_0183_2:
 				CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED L_73 = __this->___cancellationToken_4;
 				NullCheck(L_68);
 				Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572* L_74;
-				L_74 = VirtualFuncInvoker4< Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED >::Invoke(27 /* System.Threading.Tasks.Task System.IO.Stream::WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken) */, L_68, L_70, 0, ((int32_t)(((RuntimeArray*)L_72)->max_length)), L_73);
+				L_74 = VirtualFuncInvoker4< Task_t751C4CC3ECD055BABA8A0B6A5DFBB4283DCA8572*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t, CancellationToken_t51142D9C6D7C02D314DA34A6A7988C528992FFED >::Invoke(30 /* System.Threading.Tasks.Task System.IO.Stream::WriteAsync(System.Byte[],System.Int32,System.Int32,System.Threading.CancellationToken) */, L_68, L_70, 0, ((int32_t)(((RuntimeArray*)L_72)->max_length)), L_73);
 				NullCheck(L_74);
 				ConfiguredTaskAwaitable_tABE012B321A51A20F0D34F8122B9EAE3A054875C L_75;
 				L_75 = Task_ConfigureAwait_m0DD682B1D29B85067C993734C12E26554D6CBFF4(L_74, (bool)0, NULL);
@@ -33397,6 +33783,59 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslClientAuthenticationOptio
 		X509CertificateCollection_t2900D71D188EDCA7DEB5077D36103EE5DA6805CE* L_0 = ___0_value;
 		__this->___U3CClientCertificatesU3Ek__BackingField_5 = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CClientCertificatesU3Ek__BackingField_5), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* MonoSslServerAuthenticationOptions_get_Options_m2D07A52747C99A865F99FCE5BE8BBE439064CF8D_inline (MonoSslServerAuthenticationOptions_tF792264966547BD9EEB24E6E80A98E9E456A54E9* __this, const RuntimeMethod* method) 
+{
+	{
+		SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* L_0 = __this->___U3COptionsU3Ek__BackingField_1;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t SslServerAuthenticationOptions_get_EnabledSslProtocols_m31B8C712D5D3A161E9EC3CE855D7FA44F8E98012_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = __this->____enabledSslProtocols_1;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_EnabledSslProtocols_mC66D59B188A010F1B1726EA34BF61E6DFE5A51A0_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, int32_t ___0_value, const RuntimeMethod* method) 
+{
+	{
+		int32_t L_0 = ___0_value;
+		__this->____enabledSslProtocols_1 = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SslServerAuthenticationOptions_get_ClientCertificateRequired_mD383FFDB61C59FD5568DFE8B6CDED914AB9977B3_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = __this->___U3CClientCertificateRequiredU3Ek__BackingField_4;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_ClientCertificateRequired_m30FD56EF277CCC34618D4BE98CFC4B541A8AF822_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, bool ___0_value, const RuntimeMethod* method) 
+{
+	{
+		bool L_0 = ___0_value;
+		__this->___U3CClientCertificateRequiredU3Ek__BackingField_4 = L_0;
+		return;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* SslServerAuthenticationOptions_get_ServerCertificate_m7B4C5BBA8FE842496FA13E51D45BE6833671E980_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, const RuntimeMethod* method) 
+{
+	{
+		X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* L_0 = __this->___U3CServerCertificateU3Ek__BackingField_5;
+		return L_0;
+	}
+}
+IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SslServerAuthenticationOptions_set_ServerCertificate_mBA59C3095AB36F693A8DDF611E7EBE5D2AAC51E1_inline (SslServerAuthenticationOptions_tB71339A38CEE0BA50AA270950FA76FD79E4B76B4* __this, X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* ___0_value, const RuntimeMethod* method) 
+{
+	{
+		X509Certificate_t966CC553AF25AE7991F5B4C2AACBCF6C66C8F9C4* L_0 = ___0_value;
+		__this->___U3CServerCertificateU3Ek__BackingField_5 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CServerCertificateU3Ek__BackingField_5), (void*)L_0);
 		return;
 	}
 }

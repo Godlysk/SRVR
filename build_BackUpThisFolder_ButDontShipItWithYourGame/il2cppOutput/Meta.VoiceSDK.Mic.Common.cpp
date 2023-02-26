@@ -2659,7 +2659,7 @@ IL_0062:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_22 = __this->____buffer_8;
 		NullCheck(L_22);
 		NullCheck(L_20);
-		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_20, L_21, 0, ((int32_t)(((RuntimeArray*)L_22)->max_length)));
+		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_20, L_21, 0, ((int32_t)(((RuntimeArray*)L_22)->max_length)));
 		// }
 		return;
 	}
@@ -2695,7 +2695,7 @@ IL_0009:
 		// _fileStream.Close();
 		FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8* L_1 = __this->____fileStream_7;
 		NullCheck(L_1);
-		VirtualActionInvoker0::Invoke(18 /* System.Void System.IO.Stream::Close() */, L_1);
+		VirtualActionInvoker0::Invoke(20 /* System.Void System.IO.Stream::Close() */, L_1);
 		// _fileStream.Dispose();
 		FileStream_t07C7222EE10B75F352B89B76E60820160FF10AD8* L_2 = __this->____fileStream_7;
 		NullCheck(L_2);

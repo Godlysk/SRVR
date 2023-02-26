@@ -28098,7 +28098,7 @@ IL_0198_1:
 				int64_t L_67 = V_10;
 				NullCheck(L_65);
 				String_t* L_68;
-				L_68 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34 /* System.String System.Text.Encoding::GetString(System.Byte[],System.Int32,System.Int32) */, L_65, L_66, 0, ((int32_t)L_67));
+				L_68 = VirtualFuncInvoker3< String_t*, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(37 /* System.String System.Text.Encoding::GetString(System.Byte[],System.Int32,System.Int32) */, L_65, L_66, 0, ((int32_t)L_67));
 				V_12 = L_68;
 			}
 			try
