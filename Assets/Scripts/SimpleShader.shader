@@ -151,13 +151,14 @@ Shader "Unlit/SimpleShader" {
                 float3 directionUnit = normalize(o.worldPosition);
                 float updatedWavelength = wavelength * gammaFull * (1 - dot(beta3, directionUnit));
                 float3 hsvUpdated = lambda2hsv(updatedWavelength, hsv);
+                hsvUpdated[0] *= 0.925;
                 float3 rgbUpdated = hsv2rgb(hsvUpdated);
 
                 // Diffused Sky Wavelengths
                 float denominator = 0.1f;
                 float hue = 0.0f;
                 float dotProduct = dot(beta3, directionUnit);
-                for (float skyWavelength = 100.0f; skyWavelength < 1000.0f; skyWavelength += 5.0f) {
+                for (float skyWavelength = 200.0f; skyWavelength < 1200.0f; skyWavelength += 5.0f) {
                     float ratio = blackBodyDistribution(skyWavelength);
                     float transformedSkyWavelength = skyWavelength * gammaFull * (1 - dotProduct);
                     if (300.0f <= transformedSkyWavelength && transformedSkyWavelength <= 650.0f) {
@@ -167,9 +168,8 @@ Shader "Unlit/SimpleShader" {
                 }
                 hue /= denominator;
 
-                // Skylight Effect
+                // Skylight Effect (TODO)
                 
-
                 // Combining Effects
                 float3 skyColor = hsv2rgb(float3(hue, hsv[1], hsv[2]));
                 fixed4 compositeColor;
