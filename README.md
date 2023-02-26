@@ -29,3 +29,7 @@ Being able to visualize and understand Lorentz contraction and Doppler effect.
 ## What's next for Lorentz
 Light aberration, Multiplayer experience using Echo3D Backend
 Demonstrating pole vaulter experiment in this environment.
+
+## Notes
+`main` branch - non-VR environment
+`oculus-integration` branch - VR environment with optimized shader
