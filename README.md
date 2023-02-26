@@ -31,5 +31,5 @@ Light aberration, Multiplayer experience using Echo3D Backend
 Demonstrating pole vaulter experiment in this environment.
 
 ## Notes
-`main` branch - non-VR environment
-`oculus-integration` branch - VR environment with optimized shader
+- `main` branch - non-VR environment
+- `oculus-integration` branch - VR environment with optimized shader
