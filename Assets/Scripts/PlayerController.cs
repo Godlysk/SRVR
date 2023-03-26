@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private const float C = 5.0f;
 
     private float smoothValue = 0.5f;
-    private float peakVelocity = 4.0f;
+    private float peakVelocity = 3.0f;
     private float xRotation = 0.0f;
     private float yRotation = 0.0f;
 

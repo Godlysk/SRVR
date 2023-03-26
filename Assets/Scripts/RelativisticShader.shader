@@ -70,7 +70,7 @@ Shader "Unlit/RelativisticShader"
                 clipPosition.y /= gamma(transformed[1]);
                 clipPosition.z /= gamma(transformed[2]);
 
-                // Aberration effects (requires another look) [does it also include contraction?]
+                // Aberration effects (requires another look)
                 float distance = length(clipPosition);
                 float beta = length(transformed);
                 float aberrateFactor = 0.0f;
@@ -79,7 +79,7 @@ Shader "Unlit/RelativisticShader"
                     float cosphi = aberrated_angle(costheta, beta);
                     aberrateFactor = 0.5f * ((distance / sqrt(1 - costheta * costheta)) * sqrt(1 - cosphi * cosphi));
                 }
-                // clipPosition += transformed * aberrateFactor;
+                clipPosition += transformed * aberrateFactor;
 
                 // Tiling and Transformation
                 o.transformedVelocity = transformed;
